@@ -1,0 +1,27 @@
+<h1>Search Results for "<%= query || 'All Products' %>"</h1>
+
+<div class="product-list">
+    <% if (results.length === 0) { %>
+        <p>No results found.</p>
+    <% } else { %>
+        <% results.forEach(result => { %>
+            <% if (result.code && !result.category.includes('new')) { %> <!-- This is a product and not in 'new' category -->
+                <div class="product-item">
+                    <a href="/product/<%= result.code %>">
+                        <div class="product-list-image">
+                            <img src="<%= result.images[0] %>" alt="<%= result.name %>">
+                        </div>
+                        <div class="product-list-detail">
+                            <h2><%= result.name %></h2>
+                            <p>RM<%= result.price.toFixed(2) %></p>
+                        </div>
+                    </a>
+                </div>
+            <% } else if (!result.code) { %> <!-- This is a page -->
+                <div class="search-item page-item">
+                    <a href="<%= result.url %>"><%= result.name %></a>
+                </div>
+            <% } %>
+        <% }) %>
+    <% } %>
+</div>

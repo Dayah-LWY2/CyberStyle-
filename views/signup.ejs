@@ -1,0 +1,41 @@
+<div class="signup-container">
+    <h1>Sign Up</h1>
+    <form action="/signup" method="POST">
+        <label for="username">Username :</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number :</label>
+        <input type="tel" id="phone" name="phone" pattern="01\d{8,}" required placeholder="Min: 10. Starts with 01">
+
+        <label for="gender">Gender :</label>
+        <select id="gender" name="gender" required>
+            <option value="" selected disabled>Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+
+        <label for="dob">Date of Birth :</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label for="password">Password :</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="confirmPassword">Confirm Password :</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+        <% if (errorMessage) { %>
+            <div id="error-message" style="color:red;"><%= errorMessage %></div>
+        <% } %>
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+    <p>Already a member? <a href="/login">Log In</a></p>
+</div>
+
+<script src="/js/script.js"></script>

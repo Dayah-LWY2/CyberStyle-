@@ -1,0 +1,58 @@
+<div class="general">
+  <h1>Purchased Products</h1>
+</div>
+<% if (purchases.length > 0) { %>
+  <ul class="purchase-list">
+    <% purchases.forEach(purchase => { %>
+      <% const product = products.find(p => p.code === purchase.productCode); %>
+      <li class="purchase-item" id="product-<%= purchase.productCode %>">
+        
+        <!-- Product Image -->
+        <div class="purchase-container">
+          <img src="<%= product.images[0] %>" alt="<%= product.name %>" class="purchase-image">
+        </div>
+
+        <!-- Product Information -->
+        <div class="purchase-info">
+          <div class="purchase-title">
+            <%= product.name %>
+            <span class="purchase-quantity">x<%= purchase.quantity %></span>
+          </div>
+
+          <!-- Product Price and Total -->
+          <div class="purchase-pricing">
+            RM<%= product.price.toFixed(2) %>
+            <div>Total <%= purchase.quantity %> item: RM<%= (product.price * purchase.quantity).toFixed(2) %></div>
+          </div>
+
+          <!-- Delivery Date -->
+          <div class="delivery-status">
+            <% 
+              // Check if date exists and is valid
+              const date = purchase.date ? new Date(purchase.date) : null;
+              const formattedDate = date && !isNaN(date.getTime())
+                ? date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })
+                : 'Not Delivered Yet'; 
+            %>
+            Delivered on <%= formattedDate %>
+          </div>
+          
+          <!-- Action Button -->
+          <div class="purchase-action">
+            <% if (purchase.status === 'purchased') { %>
+                <button class="receive-btn" onclick="receiveProduct('<%= purchase.productCode %>', '<%= purchase.date %>')">Receive Now</button>
+            <% } else if (purchase.status === 'delivered' && !purchase.hasReviewed) { %>
+                <a href="/product/<%= purchase.productCode %>" class="rate-now-btn">Rate Now</a>
+            <% } else if (purchase.hasReviewed) { %>
+                <button class="already-rated-btn" disabled>Already Rated</button>
+            <% } %>
+        </div>
+        </div>
+      </li>
+    <% }); %>
+  </ul>
+<% } else { %>
+  <p>No purchased products found.</p>
+<% } %>
+
+<script src="/js/script.js"></script>

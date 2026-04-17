@@ -1,0 +1,53 @@
+<div class="checkout-container">
+    <h1>Your Cart</h1>
+    <% if (cart.length > 0) { %>
+        <table class="products-table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Size</th>
+                    <th>Unit Price</th>
+                    <th>Quantity </th>
+                    <th>Total</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% cart.forEach(function(item) { %>
+                    <tr>
+                        <td>
+                            <img src="<%= item.product.images[0] %>" alt="<%= item.product.name %>" width="50">
+                            <%= item.product.name %>
+                        </td>
+                        <td><%= item.size %></td>
+                        <td>RM <%= item.product.price.toFixed(2) %></td>
+                        <td><%= item.quantity %></td>
+                        <td>RM <%= (item.product.price * item.quantity).toFixed(2) %></td>
+                        <td>
+                            <form action="/remove-from-cart" method="POST">
+                                <input type="hidden" name="productCode" value="<%= item.product.code %>">
+                                <input type="hidden" name="size" value="<%= item.size %>">
+                                <button type="submit">Remove</button>
+                        </form>
+                        </td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+        
+        <div class="total-section">
+            <p><strong>Total Amount: RM <%= cart.reduce((total, item) => total + (item.product.price * item.quantity), 0).toFixed(2) %></strong></p>
+        </div>
+
+    <!-- Show Checkout button only if cart has items -->
+    <form action="/checkout" method="get">
+        <button type="submit" class="checkout-btn">Checkout</button>
+    </form>
+
+<% } else { %>
+    <p>Your cart is empty.</p>
+<% } %>
+<a href="/">Back to Home</a>
+</div>
+
+<script src="/js/script.js"></script>

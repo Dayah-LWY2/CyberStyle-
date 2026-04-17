@@ -1,0 +1,29 @@
+{
+  "name": "cyberstyle",
+  "version": "1.0.0",
+  "engines": {
+    "node": "16.x"
+  },
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@google-cloud/dialogflow": "^6.8.0",
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.3",
+    "csurf": "^1.10.0",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^5.0.0",
+    "express-ejs-layouts": "^2.5.1",
+    "express-session": "^1.18.0",
+    "fs": "^0.0.1-security",
+    "nodemailer": "^6.9.15",
+    "path": "^0.12.7"
+  }
+}

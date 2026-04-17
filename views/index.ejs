@@ -1,0 +1,49 @@
+<section class="hero">
+  <h1>Discover the Future of Fashion</h1>
+  <h2><a href="/products" class="explore-btn">Explore Now</a></h2>
+</section>
+
+<section class="categories">
+  <a href="/women" class="category-link">
+    <div class="category women">
+      <img src="/images/born-to-game-tee2.png" alt="Women Main Image">
+      <h1 class="category-btn">Shop Women</h1>
+    </div>
+  </a>
+  <a href="/men" class="category-link">
+    <div class="category men">
+      <img src="/images/techmind-tee2.png" alt="Men Main Image">
+      <h1 class="category-btn">Shop Men</h1>
+    </div>
+  </a>
+  <a href="/kids" class="category-link">
+    <div class="category kids">
+      <img src="/images/infant-cyberstyle-hoodie.png" alt="Kids Main Image">
+      <h1 class="category-btn">Shop Kids</h1>
+    </div>
+  </a>
+</section>
+
+<div class="carousel-container">
+  <div class="carousel-title">
+      <h1>Upcoming Collection</h1>
+  </div>
+  <div class="carousel">
+      <div class="carousel-inner">
+        <% products.forEach(function(product, index) { %>
+            <% if (product.category === 'new') { %>
+                  <div class="carousel-item<%= index === 0 ? ' active' : '' %>">
+                  <% var imagePath = product.images.length > 0 ? product.images[0] : '/images/placeholder.jpg'; %>
+                  <img src="<%= imagePath %>" alt="<%= product.name %>" onerror="this.onerror=null;this.src='/images/placeholder.jpg';">
+                   <div class="carousel-caption">
+                       <label><%= product.name %></label>
+                    </div>
+               </div>
+            <% } %>
+        <% }); %>
+      </div>
+  </div>
+</div>
+
+<script src="/js/script.js"></script>
+

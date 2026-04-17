@@ -1,0 +1,21 @@
+<div class="product-list-title">
+    <h1>Women's Products</h1>
+</div>
+
+<div class="product-list">
+    <% products.forEach(function(product) { %>
+        <% if (product.category === 'women') { %> <!-- Adjust category condition -->
+            <div class="product-item">
+                <a href="/product/<%= product.code %>">
+                    <div class="product-list-image">
+                        <img src="<%= product.images[0] %>" alt="<%= product.name %>">
+                    </div>
+                    <div class="product-list-detail">
+                        <h2><%= product.name %></h2>
+                        <p>RM <%= product.price.toFixed(2) %></p>
+                    </div>
+                </a>
+            </div>
+        <% } %>
+    <% }); %>
+</div>

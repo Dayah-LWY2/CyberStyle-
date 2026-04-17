@@ -1,0 +1,35 @@
+<% if (emailStatus === "failed") { %>
+<div class="popup show">
+    <div class="popup-content">
+        <div class="checkmark">⚠️</div>
+        <p>We’re having a temporary issue sending your order confirmation email.</p>
+        <p>Your order has been successfully placed and is fully secured.</p>
+        <p>You can view your order details in your account anytime.</p>
+        <button onclick="this.parentElement.parentElement.style.display='none'">
+            Close
+        </button>
+    </div>
+</div>
+<% } %>
+
+<div class="general">
+    <h1>Thank You for Your Purchase!</h1>
+    <p>Your order has been successfully processed.</p>
+</div>
+
+<div class="recommendations">
+    <h2>Recommended for You</h2>
+    <div class="recommended-products">
+        <% recommendations.forEach(product => { %>
+            <div class="product-card">
+                <a href="/product/<%= product.code %>">
+                    <img src="<%= product.images[0] %>" alt="<%= product.name %>" class="recommended-image">
+                </a>
+                <div class="recommended-info">
+                    <h3><%= product.name %></h3>
+                    <p>RM<%= product.price.toFixed(2) %></p>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+</div>

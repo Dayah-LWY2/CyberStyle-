@@ -1,0 +1,87 @@
+<div class="checkout-container">
+    <h1>Checkout</h1>
+
+    <form action="/process-payment" method="post">
+        <div>
+            <label for="address">Delivery Address:</label>
+            <textarea id="address" name="address" rows="4" placeholder="Enter your address..." required><%= address %></textarea>
+        </div>
+
+        <table class="products-table">
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Size</th>
+                    <th>Unit Price</th>
+                    <th>Quantity</th>
+                    <th>Item Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if (tempCart && tempCart.length > 0) { %>
+                    <% tempCart.forEach(item => { %>
+                        <tr>
+                            <td><%= item.name %></td>
+                            <td><%= item.size %></td>
+                            <td>RM <%= item.product.price.toFixed(2) %></td>
+                            <td><%= item.quantity %></td>
+                            <td>RM <%= (item.product.price * item.quantity).toFixed(2) %></td>
+                        </tr>
+                    <% }); %>
+                <% } else { %>
+                    <tr>
+                        <td colspan="5">No items in the cart.</td>
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>
+
+        <!-- Remark and Shipping Info -->
+        <div class="remarks-shipping-row">
+            <div class="remark">
+                <label for="remarks">Remark:</label>
+                <input type="text" id="remarks" name="remarks" placeholder="Please leave a message...">
+            </div>
+            <div class="shipping-info">
+                <p>Shipping: RM 5.90</p>
+                <p>Points Added: <span id="pointsAdded"></span></p>
+            </div>
+        </div>
+
+        <div class="rewards-container">
+            <div class="checkbox-label">
+                <input type="checkbox" name="useRewards" id="useRewards" value="true" onclick="updateTotal()">
+                <label for="useRewards">Use rewards points</label>
+                <span class="rewards-text"> (You have: <span id="rewardsPoints"><%= rewardsPoints %></span> points)</span>
+            </div>
+            <p class="points-deducted">Points Deducted: <span id="pointsDeducted"></span></p>
+        </div>
+
+        <!-- Total Calculation -->
+        <div class="total-section">
+            <p>Discount: <span id="deduction"></span></p>
+            <p>Total: RM <span id="totalAmount"><%= (tempCart.reduce((total, item) => total + (item.quantity * item.product.price), 0) + 5.90).toFixed(2) %></span></p>
+        </div>
+
+        <!-- Payment Method Selection -->
+        <div class="payment-method">
+            <h2>Payment Method</h2>
+            <label>
+                <input type="radio" name="paymentMethod" value="online-banking" required> Online Banking
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="paymentMethod" value="cod" required> Cash on Delivery
+            </label>
+        </div>
+
+        <!-- Submit Button for Order -->
+        <div class="submit-btn">
+            <button type="submit" class="payment-btn">Place Order</button>
+        </div>
+    </form>
+</div>
+
+<script src="/js/script.js"></script>
+
+  

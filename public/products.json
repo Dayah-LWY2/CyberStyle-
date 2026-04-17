@@ -1,0 +1,326 @@
+[
+  {
+    "code": "01",
+    "name": "Binary DNA Tee",
+    "category": "new",
+    "images": [
+      "/images/binary-dna-tee.png"
+    ]
+  },
+  {
+    "code": "02",
+    "name": "Cyber Sphere Tee",
+    "category": "new",
+    "images": [
+      "/images/cyber-sphere-tee2.jpg"
+    ]
+  },
+  {
+    "code": "03",
+    "name": "MicroCyber Tee",
+    "category": "new",
+    "images": [
+      "/images/microcyber-tee.png"
+    ]
+  },
+  {
+    "code": "1",
+    "name": "Infant CyberStyle hoodie",
+    "category": "kids",
+    "images": [
+      "/images/infant-cyberstyle-hoodie.png",
+      "/images/infant-cyberstyle-hoodie2.png",
+      "/images/kids-size-chart.jpg"
+    ],
+    "price": 50,
+    "sizes": [
+      "3 Month",
+      "6 Month",
+      "12 Month",
+      "18 Month",
+      "2 Year",
+      "3 Year",
+      "4 Year"
+    ],
+    "stock": {
+      "3 Month": 11,
+      "6 Month": 34,
+      "12 Month": 75,
+      "18 Month": 66,
+      "2 Year": 77,
+      "3 Year": 77,
+      "4 Year": 44
+    },
+    "description": "The pattern of the crocodile looking at the computer means that we want to attract the attention of today's children so that they are interested in IT. This hoodie also has a zipper in the middle which is very suitable for children to wear.<br>Material: 60% cotton and 40% polyester",
+    "dateAdded": "2024-09-16",
+    "popularity": 2,
+    "reviews": [
+      {
+        "username": "dayah",
+        "rating": 5,
+        "comment": "Dayah tu siapa do, wah produk ni bagus sangat. Saya kasih 100k stars.",
+        "date": "2024-09-21T16:45:09.767Z"
+      }
+    ]
+  },
+  {
+    "code": "2",
+    "name": "Rose CyberStyle",
+    "category": "kids",
+    "images": [
+      "/images/rose-cyberstyle.png",
+      "/images/rose-cyberstyle2.png",
+      "/images/kids-size-chart.jpg"
+    ],
+    "price": 70,
+    "sizes": [
+      "3 Month",
+      "6 Month",
+      "12 Month",
+      "18 Month",
+      "2 Year",
+      "3 Year",
+      "4 Year"
+    ],
+    "stock": {
+      "3 Month": 5,
+      "6 Month": 16,
+      "12 Month": 36,
+      "18 Month": 60,
+      "2 Year": 71,
+      "3 Year": 76,
+      "4 Year": 44
+    },
+    "description": "Rose CyberStyle which uses the pattern of a cat reading a book and a computer. This is due to many parents or guardians not wanting to expose their children or children under their care to technology such as smartphones and laptops at a young age. Therefore, we want to correct the inaccurate assumption that we actually want to interest them in the IT field only, but they still need to apply the practice of reading books and reduce the time they spend playing with technology like smartphones and tablets.<br>Material: ringspun cotton",
+    "dateAdded": "2024-09-13",
+    "popularity": 84
+  },
+  {
+    "code": "3",
+    "name": "CyberStyle Infant Onesie",
+    "category": "kids",
+    "images": [
+      "/images/cyberstyle-infant-onesie.png",
+      "/images/cyberstyle-infant-onesie2.png",
+      "/images/kids-size-chart.jpg"
+    ],
+    "price": 30,
+    "sizes": [
+      "3 Month",
+      "6 Month",
+      "12 Month",
+      "18 Month",
+      "2 Year",
+      "3 Year",
+      "4 Year"
+    ],
+    "stock": {
+      "3 Month": 11,
+      "6 Month": 30,
+      "12 Month": 74,
+      "18 Month": 64,
+      "2 Year": 77,
+      "3 Year": 77,
+      "4 Year": 44
+    },
+    "description": "We create this design because we want our customer to have a suitable infant for their babies, so that their children wont get any irritation because they wear an unsuitable clothes. There are a few color that customer can choose, that are pink, hot pink, black, and white.<br>Material: cotton",
+    "dateAdded": "2024-09-15",
+    "popularity": 9
+  },
+  {
+    "code": "4",
+    "name": "Cyber Wave Tee",
+    "category": "men",
+    "images": [
+      "/images/cyber-wave-tee.jpg",
+      "/images/cyber-wave-tee2.jpg",
+      "/images/men-size-chart.jpg"
+    ],
+    "price": 50,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stock": {
+      "XS": 11,
+      "S": 22,
+      "M": 34,
+      "L": 77,
+      "XL": 66,
+      "XXL": 77
+    },
+    "description": "The inspiration for the shirt is the future and technology. The design features a digital grid pattern, bold typography, and a futuristic theme.<br>Material: Cotton-Polyester Blend",
+    "dateAdded": "2024-09-16",
+    "popularity": 0
+  },
+  {
+    "code": "5",
+    "name": "Tech Fusion Graphic Tee",
+    "category": "men",
+    "images": [
+      "/images/tech-fusion-graphic-tee.jpg",
+      "/images/tech-fusion-graphic-tee2.jpg",
+      "/images/men-size-chart.jpg"
+    ],
+    "price": 70,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stock": {
+      "XS": 11,
+      "S": 18,
+      "M": 31,
+      "L": 76,
+      "XL": 66,
+      "XXL": 77
+    },
+    "description": "The design features abstract geometric shapes integrated with the text \"WHERE FASHION & TECHNOLOGY MERGE.\" It symbolizes the fusion of fashion with technology.<br>Material: Poly-cotton blend (50% cotton, 50% polyester)",
+    "dateAdded": "2024-09-13",
+    "popularity": 8
+  },
+  {
+    "code": "6",
+    "name": "TechMind Tee",
+    "category": "men",
+    "images": [
+      "/images/techmind-tee.png",
+      "/images/techmind-tee2.png",
+      "/images/men-size-chart.jpg"
+    ],
+    "price": 30,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stock": {
+      "XS": 11,
+      "S": 22,
+      "M": 34,
+      "L": 77,
+      "XL": 66,
+      "XXL": 77
+    },
+    "description": "The text \"Cyber Style\" is in neon purple and repeated several times with a bold digital-style font. The design includes a globe graphic and a barcode beneath the text.<br>Material: Poly-cotton blend (50% cotton, 50% polyester)",
+    "dateAdded": "2024-09-15",
+    "popularity": 0
+  },
+  {
+    "code": "7",
+    "name": "Born to Game Tee",
+    "category": "women",
+    "images": [
+      "/images/born-to-game-tee.png",
+      "/images/born-to-game-tee2.png",
+      "/images/women-size-chart.jpg"
+    ],
+    "price": 50,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stock": {
+      "XS": 11,
+      "S": 22,
+      "M": 33,
+      "L": 76,
+      "XL": 66,
+      "XXL": 77
+    },
+    "description": "Design featuring the slogan \"BORN TO GAME\" in large pixel text and the words \"READY, SET, PLAY\" below in smaller pixel font. The text color alternates between light purple and blue.<br>Material: Poly-cotton blend (50% cotton, 50% polyester)",
+    "dateAdded": "2024-09-16",
+    "popularity": 2,
+    "reviews": [
+      {
+        "username": "dayah",
+        "rating": 5,
+        "comment": "fvfvffrgf",
+        "date": "2024-10-01T07:58:21.820Z"
+      }
+    ]
+  },
+  {
+    "code": "8",
+    "name": "Tech Revolution Future Tee",
+    "category": "women",
+    "images": [
+      "/images/tech-revolution-future-tee.png",
+      "/images/tech-revolution-future-tee2.png",
+      "/images/women-size-chart.jpg"
+    ],
+    "price": 70,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stock": {
+      "XS": 9,
+      "S": 22,
+      "M": 29,
+      "L": 77,
+      "XL": 66,
+      "XXL": 77
+    },
+    "description": "The design features a 3D wireframe globe hovering above two wireframe hands, representing digital control and innovation. The text \"REVOLUTION\" is subtly layered, with \"DON'T WAIT TO LIVE YOUR LIFE\" beneath it. The theme centers around virtual reality, digital transformation, and innovation.<br>Material: Poly-cotton blend (50% cotton, 50% polyester)",
+    "dateAdded": "2024-09-13",
+    "popularity": 7,
+    "reviews": [
+      {
+        "username": "dayah",
+        "rating": 3,
+        "comment": "This is very nice product lol",
+        "date": "2024-09-21T06:22:23.150Z"
+      }
+    ]
+  },
+  {
+    "code": "9",
+    "name": "Cosmic Sphere Tee",
+    "category": "women",
+    "images": [
+      "/images/cosmic-sphere-tee.png",
+      "/images/cosmic-sphere-tee2.png",
+      "/images/women-size-chart.jpg"
+    ],
+    "price": 30,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stock": {
+      "XS": 11,
+      "S": 22,
+      "M": 34,
+      "L": 77,
+      "XL": 66,
+      "XXL": 77
+    },
+    "description": "Design with a glowing sphere surrounded by fine orbit lines. The sphere is in light purple and white, creating a futuristic aesthetic.<br>Material: Poly-cotton blend (50% cotton, 50% polyester)",
+    "dateAdded": "2024-09-15",
+    "popularity": 0
+  }
+]
